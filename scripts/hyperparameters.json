@@ -1,0 +1,33 @@
+{
+    "environment": {
+        "n_global_states": 5,
+        "n_local_states": 5,
+        "n_global_actions": 5,
+        "n_local_actions": 3,
+        "n_agents": 1000,
+        "gamma": 0.95
+    },
+    "global_agent": {
+        "n_mc_samples": 30,
+        "max_vi_iterations": 100,
+        "convergence_threshold": 1e-6
+    },
+    "local_agent": {
+        "max_vi_iterations": 100,
+        "convergence_threshold": 1e-6,
+        "softmax_temperature_scale": 3.0,
+        "softmax_temperature_min": 0.3
+    },
+    "alternating": {
+        "n_outer_iterations": 5,
+        "convergence_rtol": 0.01
+    },
+    "evaluation": {
+        "n_rollouts": 50,
+        "horizon": 50
+    },
+    "experiment": {
+        "k_range": [1, 50],
+        "n_eval_seeds": 15
+    }
+}
